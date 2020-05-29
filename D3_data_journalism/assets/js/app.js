@@ -92,7 +92,7 @@ d3.csv("assets/data/data.csv").then(function(stateData) {
         .attr("class", "tooltip")
         .offset([1.8, 0.8])
         .html(function(d) {
-          return (d.poverty);
+          return (`<strong>${(d.state)}<br>Poverty: ${(d.poverty)}%<br>Healthcare: ${d.healthcare}%<strong>`);
         });
 
       // Step 2: Create the tooltip in chartGroup.
